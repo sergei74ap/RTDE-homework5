@@ -5,8 +5,8 @@
     {
       "expectation_type": "expect_table_row_count_to_be_between",
       "kwargs": {
-        "max_value": 1100,
-        "min_value": 900
+        "max_value": 20000,
+        "min_value": 1000
       },
       "meta": {}
     },
@@ -32,6 +32,18 @@
       "meta": {}
     },
     {
+      "expectation_type": "expect_compound_columns_to_be_unique",
+      "kwargs": {
+        "column_list": [
+          "user_id",
+          "device_id",
+          "traffic_time"
+        ],
+        "ignore_row_if": "never"
+      },
+      "meta": {}
+    },
+    {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "device_id"
@@ -39,20 +51,26 @@
       "meta": {}
     },
     {
-      "expectation_type": "expect_column_distinct_values_to_be_in_set",
+      "expectation_type": "expect_column_values_to_be_of_type",
       "kwargs": {
         "column": "device_id",
-        "value_set": [
-          "d001",
-          "d002",
-          "d003",
-          "d004",
-          "d005",
-          "d006",
-          "d007",
-          "d008",
-          "d009"
-        ]
+        "type_": "TEXT"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_value_lengths_to_equal",
+      "kwargs": {
+        "column": "device_id",
+        "value": 4
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "device_id",
+        "regex": "^d\\d{3}$"
       },
       "meta": {}
     },
@@ -73,15 +91,15 @@
             "d009"
           ],
           "weights": [
-            0.111,
-            0.116,
-            0.127,
-            0.125,
-            0.107,
-            0.106,
-            0.105,
-            0.108,
-            0.095
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111,
+            0.1111111111111111
           ]
         },
         "threshold": 0.6
@@ -96,11 +114,19 @@
       "meta": {}
     },
     {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "bytes_sent",
+        "type_": "INTEGER"
+      },
+      "meta": {}
+    },
+    {
       "expectation_type": "expect_column_min_to_be_between",
       "kwargs": {
         "column": "bytes_sent",
-        "max_value": 222,
-        "min_value": 220
+        "max_value": 927712935936000,
+        "min_value": 0
       },
       "meta": {}
     },
@@ -108,80 +134,72 @@
       "expectation_type": "expect_column_max_to_be_between",
       "kwargs": {
         "column": "bytes_sent",
-        "max_value": 49929,
-        "min_value": 49927
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_mean_to_be_between",
-      "kwargs": {
-        "column": "bytes_sent",
-        "max_value": 25660.945,
-        "min_value": 25658.945
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_median_to_be_between",
-      "kwargs": {
-        "column": "bytes_sent",
-        "max_value": 26031.5,
-        "min_value": 26029.5
-      },
-      "meta": {}
-    },
-    {
-      "expectation_type": "expect_column_quantile_values_to_be_between",
-      "kwargs": {
-        "allow_relative_error": true,
-        "column": "bytes_sent",
-        "quantile_ranges": {
-          "quantiles": [
-            0.05,
-            0.25,
-            0.5,
-            0.75,
-            0.95
-          ],
-          "value_ranges": [
-            [
-              2941,
-              2943
-            ],
-            [
-              13524,
-              13526
-            ],
-            [
-              25943,
-              25945
-            ],
-            [
-              37367,
-              37369
-            ],
-            [
-              47576,
-              47578
-            ]
-          ]
-        }
+        "max_value": 927712935936000,
+        "min_value": 1024
       },
       "meta": {}
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
-        "column": "device_ip_addr"
+        "column": "bytes_received"
       },
       "meta": {}
     },
     {
-      "expectation_type": "expect_column_value_lengths_to_be_between",
+      "expectation_type": "expect_column_values_to_be_of_type",
       "kwargs": {
-        "column": "device_ip_addr",
-        "min_value": 1
+        "column": "bytes_received",
+        "type_": "INTEGER"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "bytes_received",
+        "max_value": 927712935936000,
+        "min_value": 0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "bytes_received",
+        "max_value": 927712935936000,
+        "min_value": 1024
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "user_id"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "user_id",
+        "type_": "INTEGER"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "user_id",
+        "min_value": 0.005
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "user_id",
+        "min_value": 10000
       },
       "meta": {}
     },
@@ -193,12 +211,43 @@
       "meta": {}
     },
     {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "traffic_time",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {}
+    },
+    {
       "expectation_type": "expect_column_values_to_be_between",
       "kwargs": {
         "column": "traffic_time",
-        "max_value": "2015-12-30 19:22:31",
-        "min_value": "2012-01-03 18:22:31",
+        "max_value": "2030-01-01 00:00:00",
+        "min_value": "2012-01-01 00:00:00",
         "parse_strings_as_datetimes": true
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "device_ip_addr"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "device_ip_addr",
+        "type_": "TEXT"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_match_regex",
+      "kwargs": {
+        "column": "device_ip_addr",
+        "regex": "^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"
       },
       "meta": {}
     }

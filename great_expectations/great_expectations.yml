@@ -98,7 +98,21 @@ data_docs_sites:
     site_index_builder:
       class_name: DefaultSiteIndexBuilder
 
+validation_operators:
+  action_list_operator:
+    class_name: ActionListValidationOperator
+    action_list:
+      - name: store_validation_result
+        action:
+          class_name: StoreValidationResultAction
+          target_store_name: validations_store
+      - name: update_data_docs
+        action:
+          class_name: UpdateDataDocsAction
+
 anonymous_usage_statistics:
   enabled: true
   data_context_id: 1c3b7add-4c14-495f-aa7c-8a8296394d00
+
 notebooks:
+

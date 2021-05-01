@@ -5,25 +5,17 @@
     {
       "expectation_type": "expect_table_row_count_to_be_between",
       "kwargs": {
-        "max_value": 11000,
-        "min_value": 9000
+        "max_value": 20000,
+        "min_value": 1000
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     },
     {
       "expectation_type": "expect_table_column_count_to_equal",
       "kwargs": {
         "value": 6
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     },
     {
       "expectation_type": "expect_table_columns_to_match_ordered_list",
@@ -37,312 +29,149 @@
           "service"
         ]
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "user_id"
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     },
     {
-      "expectation_type": "expect_column_distinct_values_to_be_in_set",
+      "expectation_type": "expect_column_values_to_be_of_type",
       "kwargs": {
         "column": "user_id",
-        "value_set": [
-          10010,
-          10020,
-          10030,
-          10040,
-          10050,
-          10060,
-          10070,
-          10080,
-          10090,
-          10100,
-          10110,
-          10120,
-          10130,
-          10140,
-          10150,
-          10160,
-          10170,
-          10180,
-          10190,
-          10200,
-          10210,
-          10220,
-          10230,
-          10240,
-          10250,
-          10260,
-          10270,
-          10280,
-          10290,
-          10300,
-          10310,
-          10320,
-          10330,
-          10340,
-          10350,
-          10360,
-          10370,
-          10380,
-          10390,
-          10400,
-          10410,
-          10420,
-          10430,
-          10440,
-          10450,
-          10460,
-          10470,
-          10480,
-          10490,
-          10500,
-          10510,
-          10520,
-          10530,
-          10540,
-          10550,
-          10560,
-          10570,
-          10580,
-          10590,
-          10600,
-          10610,
-          10620,
-          10630,
-          10640,
-          10650,
-          10660,
-          10670,
-          10680,
-          10690,
-          10700,
-          10710,
-          10720,
-          10730,
-          10740,
-          10750,
-          10760,
-          10770,
-          10780,
-          10790,
-          10800,
-          10810,
-          10820,
-          10830,
-          10840,
-          10850,
-          10860,
-          10870,
-          10880,
-          10890,
-          10900,
-          10910,
-          10920,
-          10930,
-          10940,
-          10950,
-          10960,
-          10970,
-          10980,
-          10990,
-          11000,
-          11010,
-          11020,
-          11030,
-          11040,
-          11050,
-          11060,
-          11070,
-          11080,
-          11090,
-          11100,
-          11110,
-          11120,
-          11130,
-          11140,
-          11150,
-          11160,
-          11170,
-          11180,
-          11190,
-          11200,
-          11210,
-          11220,
-          11230
-        ]
+        "type_": "INTEGER"
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     },
     {
-      "expectation_type": "expect_column_values_to_be_unique",
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
       "kwargs": {
-        "column": "start_time"
+        "column": "user_id",
+        "min_value": 0.005
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "user_id",
+        "min_value": 10000
+      },
+      "meta": {}
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "start_time"
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "start_time",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {}
     },
     {
       "expectation_type": "expect_column_values_to_be_between",
       "kwargs": {
         "column": "start_time",
-        "max_value": "2022-03-06 22:22:31",
-        "min_value": "2012-01-02 22:22:31",
+        "max_value": "2030-01-01 00:00:00",
+        "min_value": "2012-01-01 00:00:00",
         "parse_strings_as_datetimes": true
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     },
     {
-      "expectation_type": "expect_column_values_to_be_unique",
+      "expectation_type": "expect_compound_columns_to_be_unique",
       "kwargs": {
-        "column": "end_time"
+        "column_list": [
+          "user_id",
+          "start_time"
+        ],
+        "ignore_row_if": "never"
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "end_time"
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "end_time",
+        "type_": "TIMESTAMP"
+      },
+      "meta": {}
     },
     {
       "expectation_type": "expect_column_values_to_be_between",
       "kwargs": {
         "column": "end_time",
-        "max_value": "2022-03-05 22:22:31",
-        "min_value": "2012-01-02 22:22:31",
+        "max_value": "2030-01-01 00:00:00",
+        "min_value": "2012-01-01 00:00:00",
         "parse_strings_as_datetimes": true
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
-    },
-    {
-      "expectation_type": "expect_column_values_to_be_unique",
-      "kwargs": {
-        "column": "title"
-      },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "title"
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "title",
+        "type_": "TEXT"
+      },
+      "meta": {}
     },
     {
       "expectation_type": "expect_column_value_lengths_to_be_between",
       "kwargs": {
         "column": "title",
-        "min_value": 1
+        "max_value": null,
+        "min_value": 8,
+        "mostly": 0.98
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
-    },
-    {
-      "expectation_type": "expect_column_values_to_be_unique",
-      "kwargs": {
-        "column": "description"
-      },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "description"
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
-    },
-    {
-      "expectation_type": "expect_column_value_lengths_to_be_between",
-      "kwargs": {
-        "column": "description",
-        "min_value": 1
-      },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     },
     {
       "expectation_type": "expect_column_values_to_not_be_null",
       "kwargs": {
         "column": "service"
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     },
     {
-      "expectation_type": "expect_column_distinct_values_to_be_in_set",
+      "expectation_type": "expect_column_values_to_be_of_type",
+      "kwargs": {
+        "column": "service",
+        "type_": "TEXT"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_distinct_values_to_equal_set",
       "kwargs": {
         "column": "service",
         "value_set": [
@@ -351,11 +180,7 @@
           "Setup Environment"
         ]
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     },
     {
       "expectation_type": "expect_column_kl_divergence_to_be_less_than",
@@ -368,18 +193,14 @@
             "Setup Environment"
           ],
           "weights": [
-            0.3299,
-            0.3346,
-            0.3355
+            0.3333333333333333,
+            0.3333333333333333,
+            0.3333333333333333
           ]
         },
         "threshold": 0.6
       },
-      "meta": {
-        "BasicSuiteBuilderProfiler": {
-          "confidence": "very low"
-        }
-      }
+      "meta": {}
     }
   ],
   "meta": {
