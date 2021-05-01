@@ -1,6 +1,6 @@
 {
-  "data_asset_type": null,
-  "expectation_suite_name": "sperfilyev.ods_payment.warning",
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "sperfilyev.ods_payment.check",
   "expectations": [
     {
       "expectation_type": "expect_table_columns_to_match_ordered_list",
