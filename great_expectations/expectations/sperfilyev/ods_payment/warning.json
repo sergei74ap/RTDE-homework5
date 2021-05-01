@@ -1,0 +1,797 @@
+{
+  "data_asset_type": null,
+  "expectation_suite_name": "sperfilyev.ods_payment.warning",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "user_id",
+          "pay_doc_type",
+          "pay_doc_num",
+          "account",
+          "phone",
+          "billing_period",
+          "pay_date",
+          "pay_sum"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "max_value": 10000,
+        "min_value": 10000
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "user_id",
+        "max_value": 10010,
+        "min_value": 10010
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "user_id",
+        "max_value": 11230,
+        "min_value": 11230
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "user_id",
+        "max_value": 10619.892,
+        "min_value": 10619.892
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "user_id",
+        "max_value": 10620.0,
+        "min_value": 10620.0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": true,
+        "column": "user_id",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              10060,
+              10060
+            ],
+            [
+              10310,
+              10310
+            ],
+            [
+              10620,
+              10620
+            ],
+            [
+              10920,
+              10920
+            ],
+            [
+              11170,
+              11170
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "user_id",
+        "value_set": [
+          10010,
+          10020,
+          10030,
+          10040,
+          10050,
+          10060,
+          10070,
+          10080,
+          10090,
+          10100,
+          10110,
+          10120,
+          10130,
+          10140,
+          10150,
+          10160,
+          10170,
+          10180,
+          10190,
+          10200,
+          10210,
+          10220,
+          10230,
+          10240,
+          10250,
+          10260,
+          10270,
+          10280,
+          10290,
+          10300,
+          10310,
+          10320,
+          10330,
+          10340,
+          10350,
+          10360,
+          10370,
+          10380,
+          10390,
+          10400,
+          10410,
+          10420,
+          10430,
+          10440,
+          10450,
+          10460,
+          10470,
+          10480,
+          10490,
+          10500,
+          10510,
+          10520,
+          10530,
+          10540,
+          10550,
+          10560,
+          10570,
+          10580,
+          10590,
+          10600,
+          10610,
+          10620,
+          10630,
+          10640,
+          10650,
+          10660,
+          10670,
+          10680,
+          10690,
+          10700,
+          10710,
+          10720,
+          10730,
+          10740,
+          10750,
+          10760,
+          10770,
+          10780,
+          10790,
+          10800,
+          10810,
+          10820,
+          10830,
+          10840,
+          10850,
+          10860,
+          10870,
+          10880,
+          10890,
+          10900,
+          10910,
+          10920,
+          10930,
+          10940,
+          10950,
+          10960,
+          10970,
+          10980,
+          10990,
+          11000,
+          11010,
+          11020,
+          11030,
+          11040,
+          11050,
+          11060,
+          11070,
+          11080,
+          11090,
+          11100,
+          11110,
+          11120,
+          11130,
+          11140,
+          11150,
+          11160,
+          11170,
+          11180,
+          11190,
+          11200,
+          11210,
+          11220,
+          11230
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "user_id"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "user_id",
+        "max_value": 0.0123,
+        "min_value": 0.0123
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "user_id",
+        "type_list": [
+          "INTEGER",
+          "integer",
+          "int",
+          "int_",
+          "int8",
+          "int16",
+          "int32",
+          "int64",
+          "uint8",
+          "uint16",
+          "uint32",
+          "uint64",
+          "INT",
+          "TINYINT",
+          "BYTEINT",
+          "SMALLINT",
+          "BIGINT",
+          "IntegerType",
+          "LongType",
+          "DECIMAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "pay_doc_type",
+        "value_set": [
+          "MASTER",
+          "MIR",
+          "VISA"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "pay_doc_type"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "pay_doc_type",
+        "max_value": 0.0003,
+        "min_value": 0.0003
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "pay_doc_type",
+        "type_list": [
+          "CHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "pay_doc_num",
+        "max_value": 4,
+        "min_value": 4
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "pay_doc_num",
+        "max_value": 49997,
+        "min_value": 49997
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "pay_doc_num",
+        "max_value": 24989.0013,
+        "min_value": 24989.0013
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "pay_doc_num",
+        "max_value": 24824.5,
+        "min_value": 24824.5
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": true,
+        "column": "pay_doc_num",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              2697,
+              2697
+            ],
+            [
+              12530,
+              12530
+            ],
+            [
+              24824,
+              24824
+            ],
+            [
+              37387,
+              37387
+            ],
+            [
+              47651,
+              47651
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "pay_doc_num"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "pay_doc_num",
+        "max_value": 0.9079,
+        "min_value": 0.9079
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "pay_doc_num",
+        "type_list": [
+          "INTEGER",
+          "integer",
+          "int",
+          "int_",
+          "int8",
+          "int16",
+          "int32",
+          "int64",
+          "uint8",
+          "uint16",
+          "uint32",
+          "uint64",
+          "INT",
+          "TINYINT",
+          "BYTEINT",
+          "SMALLINT",
+          "BIGINT",
+          "IntegerType",
+          "LongType",
+          "DECIMAL"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "account"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "account",
+        "max_value": 0.9071,
+        "min_value": 0.9071
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "account",
+        "type_list": [
+          "CHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "phone"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "phone",
+        "max_value": 0.9994,
+        "min_value": 0.9994
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "phone",
+        "type_list": [
+          "CHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "kwargs": {
+        "column": "billing_period",
+        "value_set": [
+          "2013-01",
+          "2013-02",
+          "2013-03",
+          "2013-04",
+          "2013-05",
+          "2013-06",
+          "2013-07",
+          "2013-08",
+          "2013-09",
+          "2013-10",
+          "2013-11",
+          "2013-12",
+          "2014-01",
+          "2014-02",
+          "2014-03",
+          "2014-04",
+          "2014-05",
+          "2014-06",
+          "2014-07",
+          "2014-08",
+          "2014-09",
+          "2014-10",
+          "2014-11",
+          "2014-12",
+          "2015-01",
+          "2015-02",
+          "2015-03",
+          "2015-04",
+          "2015-05",
+          "2015-06",
+          "2015-07",
+          "2015-08",
+          "2015-09",
+          "2015-10",
+          "2015-11",
+          "2015-12",
+          "2016-01",
+          "2016-02",
+          "2016-03",
+          "2016-04",
+          "2016-05",
+          "2016-06",
+          "2016-07",
+          "2016-08",
+          "2016-09",
+          "2016-10",
+          "2016-11",
+          "2016-12",
+          "2017-01",
+          "2017-02",
+          "2017-03",
+          "2017-04",
+          "2017-05",
+          "2017-06",
+          "2017-07",
+          "2017-08",
+          "2017-09",
+          "2017-10",
+          "2017-11",
+          "2017-12",
+          "2018-01",
+          "2018-02",
+          "2018-03",
+          "2018-04",
+          "2018-05",
+          "2018-06",
+          "2018-07",
+          "2018-08",
+          "2018-09",
+          "2018-10",
+          "2018-11",
+          "2018-12",
+          "2019-01",
+          "2019-02",
+          "2019-03",
+          "2019-04",
+          "2019-05",
+          "2019-06",
+          "2019-07",
+          "2019-08",
+          "2019-09",
+          "2019-10",
+          "2019-11",
+          "2019-12",
+          "2020-01",
+          "2020-02",
+          "2020-03",
+          "2020-04",
+          "2020-05",
+          "2020-06",
+          "2020-07",
+          "2020-08",
+          "2020-09",
+          "2020-10",
+          "2020-11",
+          "2020-12",
+          "2021-01",
+          "2021-02",
+          "2021-03"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "billing_period"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "billing_period",
+        "max_value": 0.0099,
+        "min_value": 0.0099
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "billing_period",
+        "type_list": [
+          "CHAR",
+          "VARCHAR",
+          "NVARCHAR",
+          "TEXT",
+          "STRING",
+          "StringType",
+          "string",
+          "str"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "pay_sum",
+        "max_value": 4.0,
+        "min_value": 4.0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "pay_sum",
+        "max_value": 49998.0,
+        "min_value": 49998.0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "pay_sum",
+        "max_value": 24843.59,
+        "min_value": 24843.59
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "pay_sum",
+        "max_value": 24619.0,
+        "min_value": 24619.0
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": true,
+        "column": "pay_sum",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              2491.0,
+              2491.0
+            ],
+            [
+              12126.0,
+              12126.0
+            ],
+            [
+              24619.0,
+              24619.0
+            ],
+            [
+              37332.0,
+              37332.0
+            ],
+            [
+              47512.0,
+              47512.0
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "pay_sum"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_proportion_of_unique_values_to_be_between",
+      "kwargs": {
+        "column": "pay_sum",
+        "max_value": 0.9105,
+        "min_value": 0.9105
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_type_list",
+      "kwargs": {
+        "column": "pay_sum",
+        "type_list": [
+          "FLOAT",
+          "DOUBLE",
+          "FLOAT4",
+          "FLOAT8",
+          "DOUBLE_PRECISION",
+          "NUMERIC",
+          "FloatType",
+          "DoubleType",
+          "float_",
+          "float16",
+          "float32",
+          "float64",
+          "number",
+          "DECIMAL"
+        ]
+      },
+      "meta": {}
+    }
+  ],
+  "meta": {
+    "columns": {
+      "account": {
+        "description": ""
+      },
+      "billing_period": {
+        "description": ""
+      },
+      "pay_date": {
+        "description": ""
+      },
+      "pay_doc_num": {
+        "description": ""
+      },
+      "pay_doc_type": {
+        "description": ""
+      },
+      "pay_sum": {
+        "description": ""
+      },
+      "phone": {
+        "description": ""
+      },
+      "user_id": {
+        "description": ""
+      }
+    },
+    "great_expectations_version": "0.13.19"
+  }
+}

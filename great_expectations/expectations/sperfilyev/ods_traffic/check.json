@@ -1,0 +1,266 @@
+{
+  "data_asset_type": "Dataset",
+  "expectation_suite_name": "sperfilyev.ods_traffic.check",
+  "expectations": [
+    {
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "kwargs": {
+        "max_value": 1100,
+        "min_value": 900
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_column_count_to_equal",
+      "kwargs": {
+        "value": 6
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_list",
+      "kwargs": {
+        "column_list": [
+          "user_id",
+          "traffic_time",
+          "device_id",
+          "device_ip_addr",
+          "bytes_sent",
+          "bytes_received"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "device_id"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_distinct_values_to_be_in_set",
+      "kwargs": {
+        "column": "device_id",
+        "value_set": [
+          "d001",
+          "d002",
+          "d003",
+          "d004",
+          "d005",
+          "d006",
+          "d007",
+          "d008",
+          "d009"
+        ]
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_kl_divergence_to_be_less_than",
+      "kwargs": {
+        "column": "device_id",
+        "partition_object": {
+          "values": [
+            "d001",
+            "d002",
+            "d003",
+            "d004",
+            "d005",
+            "d006",
+            "d007",
+            "d008",
+            "d009"
+          ],
+          "weights": [
+            0.111,
+            0.116,
+            0.127,
+            0.125,
+            0.107,
+            0.106,
+            0.105,
+            0.108,
+            0.095
+          ]
+        },
+        "threshold": 0.6
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "bytes_sent"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_min_to_be_between",
+      "kwargs": {
+        "column": "bytes_sent",
+        "max_value": 222,
+        "min_value": 220
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_max_to_be_between",
+      "kwargs": {
+        "column": "bytes_sent",
+        "max_value": 49929,
+        "min_value": 49927
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_mean_to_be_between",
+      "kwargs": {
+        "column": "bytes_sent",
+        "max_value": 25660.945,
+        "min_value": 25658.945
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_median_to_be_between",
+      "kwargs": {
+        "column": "bytes_sent",
+        "max_value": 26031.5,
+        "min_value": 26029.5
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_quantile_values_to_be_between",
+      "kwargs": {
+        "allow_relative_error": true,
+        "column": "bytes_sent",
+        "quantile_ranges": {
+          "quantiles": [
+            0.05,
+            0.25,
+            0.5,
+            0.75,
+            0.95
+          ],
+          "value_ranges": [
+            [
+              2941,
+              2943
+            ],
+            [
+              13524,
+              13526
+            ],
+            [
+              25943,
+              25945
+            ],
+            [
+              37367,
+              37369
+            ],
+            [
+              47576,
+              47578
+            ]
+          ]
+        }
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "device_ip_addr"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_value_lengths_to_be_between",
+      "kwargs": {
+        "column": "device_ip_addr",
+        "min_value": 1
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "kwargs": {
+        "column": "traffic_time"
+      },
+      "meta": {}
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "column": "traffic_time",
+        "max_value": "2015-12-30 19:22:31",
+        "min_value": "2012-01-03 18:22:31",
+        "parse_strings_as_datetimes": true
+      },
+      "meta": {}
+    }
+  ],
+  "meta": {
+    "BasicSuiteBuilderProfiler": {
+      "batch_kwargs": {
+        "data_asset_name": "sperfilyev.ods_t_traffic",
+        "datasource": "sperfilyev_db",
+        "limit": 1000,
+        "schema": "sperfilyev",
+        "table": "ods_t_traffic"
+      },
+      "created_at": 1619759983.963101,
+      "created_by": "BasicSuiteBuilderProfiler"
+    },
+    "citations": [
+      {
+        "batch_definition": null,
+        "batch_kwargs": {
+          "data_asset_name": "sperfilyev.ods_t_traffic",
+          "datasource": "sperfilyev_db",
+          "limit": 1000,
+          "schema": "sperfilyev",
+          "table": "ods_t_traffic"
+        },
+        "batch_markers": {
+          "ge_load_time": "20210430T051928.993619Z"
+        },
+        "batch_parameters": null,
+        "batch_request": null,
+        "batch_spec": null,
+        "citation_date": "2021-04-30T05:19:48.713309Z",
+        "comment": "BasicSuiteBuilderProfiler added a citation based on the current batch."
+      }
+    ],
+    "columns": {
+      "bytes_received": {
+        "description": ""
+      },
+      "bytes_sent": {
+        "description": ""
+      },
+      "device_id": {
+        "description": ""
+      },
+      "device_ip_addr": {
+        "description": ""
+      },
+      "traffic_time": {
+        "description": ""
+      },
+      "user_id": {
+        "description": ""
+      }
+    },
+    "great_expectations_version": "0.13.19",
+    "notes": {
+      "content": [
+        "#### This is an _example_ suite\n\n- This suite was made by quickly glancing at 1000 rows of your data.\n- This is **not a production suite**. It is meant to show examples of expectations.\n- Because this suite was auto-generated using a very basic profiler that does not know your data like you do, many of the expectations may not be meaningful.\n"
+      ],
+      "format": "markdown"
+    }
+  }
+}
